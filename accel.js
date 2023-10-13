@@ -1,5 +1,5 @@
 let y = 10; let r = 200; g = 180; b = 0;
-
+//sjs
 function draw() {
     background(r, g, b);
     strokeWeight(10);
