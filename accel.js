@@ -34,14 +34,20 @@ function draw() {
         y--;
     if (y >= height || y <= 0)
         ned = !ned;
-    if (accelerationX > 70) {
-        r = random(0, 256);
-        g = random(0, 256);
-        b = random(0, 256);
+    if (accelerationX > 20) {
+        
         if(rystet%2 == 0)
         ned = !ned;
         rystet++;
     }
+    if (flyttet<300)
+    r=255, b=0, g=0
+
+    if (1000>flyttet>500)
+    r=255, b=255, g=153
+
+    if (flyttet>1000)
+    r=0, b=0, g=255
     
 text('rystet: ' + str(rystet), 50, height-100);
 text('flyttet: ' + str(flyttet),50, height-50);
@@ -51,3 +57,4 @@ function deviceMoved(){
     flyttet++;
 
 }
+
