@@ -67,8 +67,8 @@ function draw() {
     if(accelerationX==false && accelerationY==false)
     runTjek=false;
     
-text('skridt: ' + str(rystet), 40, height-height/1.2);
-text('distance: ' + str(flyttet),40, height-height/1.3);
+text('skridt: ' + str(rystet), 10, height-height/1.2);
+text('distance: ' + str(flyttet),10, height-height/1.3);
 }
 
 function deviceMoved(){
