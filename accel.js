@@ -1,9 +1,11 @@
 let runTjek = false; 
-let imgRun;
-let imgStanding;
+let img;
 
 let y = 10; let r = 200; g = 180; b = 0;
 let ned = true;
+let rystet = 0;
+let flyttet = 0;
+
 
 
 function preload() {
