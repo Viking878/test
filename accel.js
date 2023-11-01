@@ -39,7 +39,8 @@ function draw() {
     if(runTjek==true) //runtjek og gif
         image(imgRun, -100, 100);
     else
-    image(imgStanding, 50, 200);
+    image(imgStanding, 0, 200);
+    imgStanding.resize(250, 250);
 
     ellipse(width / 2, y, 50);
     if (ned)
@@ -48,7 +49,7 @@ function draw() {
         y=y-4;
     if (y >= height-100 || y <= 0)
         ned = !ned;
-    if (accelerationX > 20) {
+    if (accelerationY > 5) {
         
         if(rystet%2 == 0)
         ned = !ned;
