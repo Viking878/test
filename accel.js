@@ -6,8 +6,6 @@ let ned = true;
 let rystet = 0;
 let flyttet = 0;
 
-
-
 function preload() {
     imgRun = loadImage('run.gif'); //preload gif
     imgStanding = loadImage('standing.png'); //preload png
@@ -65,12 +63,11 @@ function draw() {
     if (flyttet>1000)
     r=0, b=0, g=255
     
-text('skridt: ' + str(rystet), 50, height-100);
-text('distance: ' + str(flyttet),50, height-50);
+text('skridt: ' + str(rystet), 30, height-500);
+text('distance: ' + str(flyttet),30, height-450);
 }
 
 function deviceMoved(){
     flyttet++;
     runTjek = true; //runtjek set true når moved
 }
-
