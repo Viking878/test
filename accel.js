@@ -63,8 +63,8 @@ function draw() {
     if (flyttet>1000)
     r=0, b=0, g=255
     
-text('skridt: ' + str(rystet), 30, height-500);
-text('distance: ' + str(flyttet),30, height-450);
+text('skridt: ' + str(rystet), 50, height-height/1.2);
+text('distance: ' + str(flyttet),50, height-height/1.3);
 }
 
 function deviceMoved(){
