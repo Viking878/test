@@ -40,16 +40,16 @@ function draw() {
     background(200);
     strokeWeight(10);
     
-    if(flyttet==0||flyttet==1000){
+    if(flyttet==0||flyttet==1000||flyttet==2000){
         længde=0;
         r=random(0,255); g=random(0,255); b=random(0,255);
     }
   
   
     rect(25, 80, 250, 35, 28);
-    stroke(0,255,0)
+    stroke(r,g,b);
     fill(r,g,b);
-    ellipse(længde/3+42, 97, 15, 15);
+    ellipse(længde/5+42, 97, 15, 15);
     stroke(0)
     fill(200);
 
