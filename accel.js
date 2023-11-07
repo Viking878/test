@@ -9,6 +9,8 @@ let flyttet = 0;
 function preload() {
     imgRun = loadImage('run.gif'); //preload gif
     imgStanding = loadImage('standing.png'); //preload png
+    imggrassAnimation = loadImage('grass_animation.gif'); //preload gif
+    imggrass = loadImage('grass.png'); //preload png
   }
 
 function setup() {
@@ -36,13 +38,19 @@ function setup() {
 function draw() {
     background(r, g, b);
     strokeWeight(10);
-    if(runTjek==true) //runtjek og gif
+    if(runTjek==true){ //runtjek og gif
         image(imgRun, -100, 100);
-    else
+        image(imggrassAnimation, 0, 400);
+    
+    }
+    else {
     image(imgStanding, 0, 200);
     imgStanding.resize(250, 250);
-
+    image(imggrass, 0, 400);
+    
+    
     ellipse(width / 2, y, 50);
+    }
     if (ned)
         y=y+4;
     else
