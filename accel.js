@@ -1,10 +1,11 @@
 let runTjek = false; 
 let img;
 
-let y = 10; let r = 200; g = 180; b = 0;
+let y = 10; let r = 200; g = 0; b = 0;
 let ned = true;
 let rystet = 0;
 let flyttet = 0;
+let længde
 
 function preload() {
     imgRun = loadImage('run.gif'); //preload gif
@@ -39,12 +40,16 @@ function draw() {
     background(200);
     strokeWeight(10);
     
-    if(flyttet==0||flyttet==1000)
+    if(flyttet==0||flyttet==1000){
+        længde=0;
+        r=random(0,255); g=random(0,255); b=random(0,255);
+    }
+  
+  
     rect(25, 80, 250, 35, 28);
-
     stroke(0,255,0)
-    fill(0,255,0);
-    ellipse(flyttet/2+42, 97, 15, 15);
+    fill(r,g,b);
+    ellipse(længde/3+42, 97, 15, 15);
     stroke(0)
     fill(200);
 
@@ -92,5 +97,6 @@ text('distance: ' + str(flyttet),10, height-height/1.1);
 
 function deviceMoved(){
     flyttet++;
+    længde++;
     runTjek = true; //runtjek set true når moved
 }
