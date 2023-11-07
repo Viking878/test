@@ -36,27 +36,38 @@ function setup() {
 
 
 function draw() {
-    background(r, g, b);
+    background(200);
     strokeWeight(10);
+    
+    if(flyttet==0||flyttet==1000)
+    rect(25, 80, 250, 35, 28);
+
+    stroke(0,255,0)
+    fill(0,255,0);
+    ellipse(flyttet/2+42, 97, 15, 15);
+    stroke(0)
+    fill(200);
+
+
+
     if(runTjek==true){ //runtjek og gif
         image(imgRun, -100, 100);
-        image(imggrassAnimation, 0, 400);
+        image(imggrassAnimation, 0, 420);
     
     }
     else {
     image(imgStanding, 0, 200);
     imgStanding.resize(250, 250);
-    image(imggrass, 0, 400);
+    image(imggrass, 0, 420);
     
     
-    ellipse(width / 2, y, 50);
+   
     }
     if (ned)
         y=y+4;
     else
         y=y-4;
-    if (y >= height-100 || y <= 0)
-        ned = !ned;
+    
     if (accelerationY > 5) {
         
         if(rystet%2 == 0)
@@ -75,8 +86,8 @@ function draw() {
     if(accelerationX==false && accelerationY==false)
     runTjek=false;
     
-text('skridt: ' + str(rystet), 10, height-height/1.2);
-text('distance: ' + str(flyttet),10, height-height/1.3);
+//text('skridt: ' + str(rystet), 10, height-height/1.3);
+text('distance: ' + str(flyttet),10, height-height/1.1);
 }
 
 function deviceMoved(){
