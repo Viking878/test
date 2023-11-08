@@ -16,7 +16,7 @@ function preload() {
 
 function setup() {
     canvas = createCanvas(300, 550, 'beholder');
-    textSize(24);
+    textSize(20);
     // giver canvas border på 2 pixel, 
     // og sørger derefter for at kanten tælles med i width
     canvas.elt.style.border = '5px solid black';
