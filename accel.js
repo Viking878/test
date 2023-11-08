@@ -50,8 +50,7 @@ function draw() {
     image(imgStanding, 0, 200);
     imgStanding.resize(250, 250);
     image(imggrass, 0, 420);
-    
-   
+    }
     if(længde>=500){
         længde=0;
         r=random(0,255); g=random(0,255); b=random(0,255);
@@ -65,7 +64,6 @@ function draw() {
     stroke(0)
     fill(200);
    
-    }
     if (ned)
         y=y+4;
     else
