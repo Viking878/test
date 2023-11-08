@@ -51,7 +51,7 @@ function draw() {
     imgStanding.resize(250, 250);
     image(imggrass, 0, 420);
     }
-    if(længde>=500){
+    if(længde>=1000){
         længde=0;
         r=random(0,255); g=random(0,255); b=random(0,255);
     }
