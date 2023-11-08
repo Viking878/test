@@ -60,7 +60,7 @@ function draw() {
     rect(25, 80, 250, 35, 28);
     stroke(r,g,b);
     fill(r,g,b);
-    ellipse(længde/5+42, 97, 15, 15);
+    ellipse(længde+42, 97, 15, 15);
     stroke(0)
     fill(200);
    
