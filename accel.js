@@ -51,8 +51,8 @@ function draw() {
     imgStanding.resize(250, 250);
     image(imggrass, 0, 420);
     
-    længde=flyttet/2
-    if(længde>=1000){
+   
+    if(længde>=500){
         længde=0;
         r=random(0,255); g=random(0,255); b=random(0,255);
     }
@@ -95,5 +95,6 @@ text('distance: ' + str(flyttet),10, height-height/1.1);
 
 function deviceMoved(){
     flyttet++;
+    længde++;
     runTjek = true; //runtjek set true når moved
 }
